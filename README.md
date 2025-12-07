@@ -29,11 +29,6 @@
 | `password_hash` | VARCHAR(100) | BCrypt 哈希后的密码 |
 | `created_at` | TIMESTAMP | 自动记录注册时间 |
 
-排序语句示例：
-```sql
-ALTER TABLE users CONVERT TO CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
-```
-
 ### listings 表
 | 字段 | 类型 | 说明 |
 |---|---|---|
