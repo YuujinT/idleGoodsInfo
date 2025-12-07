@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="https://jakarta.ee/xml/ns/jakartaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd"
+         version="6.0">
+  <display-name>IdleGoodsInfo</display-name>
+
+  <listener>
+    <listener-class>com.example.idlegoodsinfo.web.StartupListener</listener-class>
+  </listener>
+
+  <servlet>
+    <servlet-name>AuthServlet</servlet-name>
+    <servlet-class>com.example.idlegoodsinfo.web.AuthServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>AuthServlet</servlet-name>
+    <url-pattern>/login</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AuthServlet</servlet-name>
+    <url-pattern>/register</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AuthServlet</servlet-name>
+    <url-pattern>/logout</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>ListingServlet</servlet-name>
+    <servlet-class>com.example.idlegoodsinfo.web.ListingServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>ListingServlet</servlet-name>
+    <url-pattern>/listings</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ListingServlet</servlet-name>
+    <url-pattern>/listings/*</url-pattern>
+  </servlet-mapping>
+
+
+  <welcome-file-list>
+    <welcome-file>login</welcome-file>
+  </welcome-file-list>
+</web-app>
